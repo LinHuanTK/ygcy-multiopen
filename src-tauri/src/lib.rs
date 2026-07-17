@@ -57,7 +57,7 @@ fn read_key_from_keychain() -> Result<[u8; 32], String> {
 
 fn keychain_has_key() -> bool { read_key_from_keychain().is_ok() }
 
-struct Crypto { key: [u8; 32] }
+pub struct Crypto { pub key: [u8; 32] }
 
 impl Crypto {
     fn from_key(key: [u8; 32]) -> Self { Self { key } }
